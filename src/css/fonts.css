@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'Museo Sans Cyrl 300';
+	src: url('MuseoSansCyrl-300Italic.eot');
+	src: local('MuseoSansCyrl-300Italic'),
+		url('MuseoSansCyrl-300Italic.eot?#iefix') format('embedded-opentype'),
+		url('MuseoSansCyrl-300Italic.woff') format('woff'),
+		url('MuseoSansCyrl-300Italic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
