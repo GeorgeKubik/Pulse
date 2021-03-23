@@ -67,6 +67,9 @@
 		}
 	}
 	.advantages {
+		.title {
+			font-size: 25px;
+		}
 		padding: 0 10px;
 		&__icons{
 			margin-top: 44px;
@@ -82,8 +85,8 @@
 		} 
 		&__link {
 			color: #ff0000;
-            text-transform: uppercase;
-            text-decoration: underline;
+        	text-transform: uppercase;
+        	text-decoration: underline;
 		}
 	}
 }
