@@ -12,11 +12,19 @@
 			margin-top: 90px;
 		}
 	}
-	.advantages {
-		&__icons {
-			width: 100%;
+	.consultation {
+		&__descr {
+			text-align: center;
 		}
-	}	
+		.title {
+			text-align: center;
+			font-size: 30px;
+		}
+		.feed-form {
+			margin: 0 auto;
+			margin-top: 50px;
+			}
+	}
 }
 
 @media (max-width: 575px) {
@@ -59,24 +67,28 @@
 		}
 	}
 	.advantages {
+		padding: 0 10px;
 		&__icons{
+			margin-top: 44px;
 			padding: 0 10px;
 		}
-		&__icon {
-			width: 158px;
-		}
 		&__text {
-			font-size: 10px;
-			&__title {
-				font-size: 13px;
-				margin-top: 30px;
-				margin-bottom: 19px;
+			font-size: 13px;
+			.title {
+				font-size: 17px;
+				margin-top: 16px;
+				margin-bottom: 17px;
 			}
-		}  
+		} 
+		&__link {
+			color: #ff0000;
+            text-transform: uppercase;
+            text-decoration: underline;
+		}
 	}
 }
 
-@media (max-width: 321px) {
+@media (max-width: 319px) {
 	.promo {
 		padding: 21 10 50 10;
 		.header {
@@ -144,7 +156,7 @@
 			margin-top: 13px;
 		}
 		&__text {
-			&__title {
+			.title {
 				margin-top: 2px;
 				margin-bottom: 5px;
 			}

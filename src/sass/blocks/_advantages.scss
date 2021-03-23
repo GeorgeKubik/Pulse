@@ -2,7 +2,7 @@
     padding: 69px 0 78px 0;
     background-color: #f6f6f6;
     &__icons {
-        width: 924px;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -17,7 +17,7 @@
         font-size: 14px;
         font-weight: 300;
         text-align: center;
-        &__title {
+        .title {
             color: #0d0d0d;
             font-size: 18px;
             font-weight: 700;
