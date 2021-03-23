@@ -16,9 +16,6 @@
 		&__icons {
 			width: 100%;
 		}
-		&__icon {
-			width: 207px;
-		}
 	}	
 }
 
@@ -158,6 +155,16 @@
 			margin-top: 49px;
 			width: 200px;
 			height: 50px;
+		}
+	}
+	.consultation {
+		.title {
+			font-size: 13px;
+			text-align: center;
+		}
+		&__descr {
+			font-size: 13px;
+			text-align: center;
 		}
 	}
 }
