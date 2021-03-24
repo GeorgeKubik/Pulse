@@ -1,0 +1,44 @@
+.review {
+    padding-bottom: 71px;
+    &__blocks {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        hr {
+            margin: 0;
+            margin-top: 48px;
+            margin-bottom: 53px;
+        }
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__text {
+        margin-left: 62px;
+    }
+    &__subtitle{
+        color: #0d0d0d;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    &__marathon{
+        margin-top: 10px;
+        color: #646464;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    &__descr {
+        margin-top: 19px;
+        color: #0d0d0d;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    &__img {
+        display: block;
+        width: 169px;
+        height: 169px;
+    }
+}
