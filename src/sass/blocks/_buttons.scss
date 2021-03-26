@@ -1,4 +1,5 @@
 .button {
+    position: relative;
     width: 150px;
     height: 30px;
     border-radius: 5px;
@@ -8,14 +9,35 @@
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
+    &:before {
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 30px;
+        background: rgba(255,255,255,0.3);
+        border-radius: 5px;
+        transition: all 2s ease;
+    }
+        &:hover:before {
+            width: 100%;
+        }
+    
     &_main {
         margin-top: 67px;
         width: 300px;
         height: 50px;
+        &:before{
+            height: 50px;
+        }
     }
     &_submit {
         width: 100%;
         height: 55px;
         font-size: 16px;
+        &:before{
+            height: 55px;
+        }
     }
 }
