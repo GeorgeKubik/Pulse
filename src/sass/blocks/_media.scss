@@ -1,11 +1,28 @@
-@media (max-width: 991px) {
+@media (max-width: 992px) {
 	.promo{
 		padding-right: 15px;
+		padding-left: 15px;
 	}
-	.footer {
+	.consultation {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.title_left {
+			text-align: center;
+		}
+		&__descr {
+			margin: 50px;
+			text-align: center;
+		}
+		.feed-form {
+			margin: 36px auto;
+		}
+	}
+	.footer { //не адаптируется((
+
 		&__info {
-			width: 370px;
-        	height: 150px;
+		width: 370px;
+		height: 150px;
 			&__addr {
 				margin-bottom: 15px;
 			}
@@ -94,8 +111,8 @@
 		} 
 		&__link {
 			color: #ff0000;
-        	text-transform: uppercase;
-        	text-decoration: underline;
+			text-transform: uppercase;
+			text-decoration: underline;
 		}
 	}
 }
