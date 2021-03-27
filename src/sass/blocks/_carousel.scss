@@ -21,4 +21,37 @@
         right: -66px;
         left: auto;
     }
+    .slick-dots {
+        list-style-type: none;
+        width: 86px;
+        padding-left: 0;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .slick-active {
+            border-radius: 100%;
+            box-shadow: 3px 3px 20px $main-color;
+            height: 5px;
+            transition: 0.7s all;
+            background-color: $main-color;
+        }
+        li {
+            border-radius: 100%;
+            border: 2px solid $main-color;
+            background-color: #fff;
+            width: 15px;
+            height: 15px;
+            padding: 2px;  
+            &:hover {
+                border-radius: 100%;
+                box-shadow: 3px 3px 20px $main-color;
+                transition: 0.7s all;
+                background-color: $main-color;
+            }
+            button {
+                display: none;
+            }     
+        }           
+    } 
 }

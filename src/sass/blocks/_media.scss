@@ -1,7 +1,16 @@
 @media (max-width: 991px) {
 	.promo{
 		padding-right: 15px;
-	}	
+	}
+	.footer {
+		&__info {
+			width: 370px;
+        	height: 150px;
+			&__addr {
+				margin-bottom: 15px;
+			}
+		}	
+	}
 }
 @media (max-width: 767px) {
 	.promo{
@@ -25,14 +34,6 @@
 			margin-top: 50px;
 		}
 	}
-	/* .carousel {
-		.slick-dots {
-			margin: 0 auto;
-			list-style-type: none;
-			display: flex;
-			justify-content: center;
-		}
-	} */
 }
 
 @media (max-width: 575px) {
