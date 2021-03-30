@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('.carousel__inner').slick({
         speed: 1200,
-        adaptiveHeight: true,
+        adaptiveHeight: false,
         prevArrow: '<button type="button" class="slick-prev"><img src="img/section_3/left.svg"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="img/section_3/right.svg"></button>',
         responsive: [
@@ -66,6 +66,57 @@ $(document).ready(function(){
         });
     });
     
+/*     $('#consultation-form').validate();
+    $('#consultation form').validate({
+        rules: {
+            name: "required",
+            phone: "required",
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: "Пожалуйста введите свое имя", {
+                required: "Пожалуйста, введите свое имя",
+                minlength: jQuery.validate.format("Введите {0} символа!")
+                },
+            phone: "Пожалуйста введите свой номер телефона",
+            email: {
+                required: "Пожалуйста, введите свою почту",
+                email: "Неправильно введен адрес почты"
+            }
+        }
+    });
+    $('#order form').validate(); */
+    
+    function valideForms(form) {
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: "Пожалуйста введите свое имя", /* {
+                    required: "Пожалуйста, введите свое имя",
+                    minlength: jQuery.validate.format("Введите {0} символа!")
+                    }, */
+                phone: "Пожалуйста введите свой номер телефона",
+                email: {
+                    required: "Пожалуйста, введите свою почту",
+                    email: "Неправильно введен адрес почты"
+                }
+            }
+        });
+    }
+
+    valideForms('#consultation-form');
+    valideForms('#consultation form');
+    valideForms('#order form');
 });
 
 

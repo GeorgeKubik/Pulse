@@ -18,16 +18,28 @@
 			margin: 36px auto;
 		}
 	}
-	.footer { //не адаптируется((
 
-		&__info {
-		width: 370px;
-		height: 150px;
-			&__addr {
-				margin-bottom: 15px;
-			}
-		}	
+	.carousel_wd70 {
+		width: 70%;
 	}
+
+	.footer{
+		position: relative;
+		.footer__info { 
+			position: absolute;
+			left: calc(100% - 191px);
+			padding: 15px 10px 10px 10px;
+			width: 382px;
+			height: 198px;
+		}
+		iframe {
+			height: 450px;
+		}
+	} 
+	.footer .footer__addr {
+		margin-bottom: 20px;
+	}
+	
 }
 @media (max-width: 767px) {
 	.promo{
@@ -35,22 +47,65 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			margin-top: 90px;
+			margin-top: 37px;
 		}
 	}
 	.consultation {
 		&__descr {
 			text-align: center;
+			margin-top: 36px;
 		}
-		.title {
-			text-align: center;
-			font-size: 30px;
+		.title_left {
+			font-size: 30px;		
 		}
 		.feed-form {
 			margin: 0 auto;
 			margin-top: 50px;
 		}
 	}
+	.catalog .catalog-item {
+		margin: 0 0 10px 0;
+		&:nth-child(2n) {
+			margin-left: 5px;
+		}
+		&:nth-child(2n+1) {
+			margin-right: 5px;
+		}
+	}
+	.review .review__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer {
+		position: relative;
+	}
+	.footer .footer__info {
+		position: absolute;
+		left: calc(100% - 153px); 
+		padding: 15px 10px;
+		width: 306px;
+		height: 148px;
+	}
+
+	.footer .footer__addr {
+		font-size: 17px;
+	}
+
+	.footer .footer__phone {
+		margin-bottom: 17px;
+		font-weight: 500;
+	}
+
+	.footer .footer__social-item {
+		width: 45px;
+		height: 45px;
+	}
+	iframe {
+		height: 350px;
+	}
+
 }
 
 @media (max-width: 575px) {
@@ -92,27 +147,49 @@
 			font-size: 18px;
 		}
 	}
-	.advantages {
-		.title {
-			font-size: 25px;
-		}
+	
+	.advantages .title {
+		font-size: 25px;
+	}
+	.advantages .advantages__icons{
+		margin-top: 35px;
 		padding: 0 10px;
-		&__icons{
-			margin-top: 44px;
-			padding: 0 10px;
+	}
+	.advantages .advantages__text {
+		font-size: 13px;
+	}
+	.advantages .advantages__text .title {
+		font-size: 17px;
+		margin-top: 16px;
+		margin-bottom: 17px;
+	}
+	 
+	.advantages .advantages__link {
+		color: #ff0000;
+		text-transform: uppercase;
+		text-decoration: underline;
+	}
+	.consultation {
+		padding: 35px 0 92px 0;
+	}
+	.consultation .title {
+		font-size: 25px;
+	}
+	.consultation .consultation__descr {
+		margin-top: 35px;
+	}
+
+	.catalog .catalog__tab {
+		width: 148px;
+		font-size: 16px;
+	}
+	.catalog .catalog-item {
+		margin: 0 0 10px 0;
+		&:nth-child(2n) {
+			margin-left: 0;
 		}
-		&__text {
-			font-size: 13px;
-			.title {
-				font-size: 17px;
-				margin-top: 16px;
-				margin-bottom: 17px;
-			}
-		} 
-		&__link {
-			color: #ff0000;
-			text-transform: uppercase;
-			text-decoration: underline;
+		&:nth-child(2n+1) {
+			margin-right: 0;
 		}
 	}
 }
