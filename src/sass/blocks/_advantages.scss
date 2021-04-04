@@ -35,5 +35,15 @@
             text-transform: uppercase;
             text-decoration: underline;
         }
-    }  
+    } 
+    .advantages_animated {
+        animation: heartbeat 1.5s ease infinite;
+     /*    animation-name: ;
+        animation-duration: ;
+        animation-timing-function: ;
+        animation-iteration-count: ; */
+        &:hover {
+            animation-play-state: paused;
+        }
+    } 
 }
