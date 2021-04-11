@@ -4,11 +4,13 @@ const sass        = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
 
 gulp.task('server', function() {
     browserSync({
         server: {
-            baseDir: "src"
+            baseDir: "dist"
         }
     });
     gulp.watch("src/*.html").on('change', browserSync.reload);
@@ -20,13 +22,18 @@ gulp.task('styles', function() {
         .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer())
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest("src/css"))
+        .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream()); // изменения в браузере
 }); //запускается при компеляции
 
 gulp.task('watch', function() {
-    gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel('styles'));
-    gulp.watch("src/*html").on("change", browserSync.reload);
+    gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
+    gulp.watch("src/*html").on("change", gulp.parallel('html'));
 }); // следит за изменениями файлов
+gulp.task('html', function() {
+    return gulp.src("src/*.html")
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest("dist/"));
+});
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles')); // объедилинили первые две команды, чтобы запускать по умолчанию одновременно
