@@ -1,0 +1,20 @@
+.button {
+	width: 150px;
+	height: 30px;
+	background: $main-color;
+	border-radius: 5px;
+	color: #FFFFFF;
+	font-weight: 500;
+	font-size: 12px;
+	border: none;
+	text-transform: uppercase;
+	&-main {
+		margin-top: 66px;
+		width: 300px;
+		height: 50px;
+	}
+	&-submit {
+		width: 300px;
+		height: 58px;
+	}
+}

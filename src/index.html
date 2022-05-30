@@ -5,13 +5,104 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<title>Document</title>
 </head>
 <body>
 	
-	<h1>hi world</h1>
+	<div class="promo">
+		<div class="container">
+			<header class="header">
+				<a href="#" class="header__logo">
+					<img src="img/s1/logo.png" alt="logo">
+				</a>
+				<div class="header__official">
+					Официальный представитель
+					<span>Garmin, Polar, Suunto</span>
+				</div>
+				<div class="header__contacts">
+					<a href="tel:+74999228974" class="header__phone">
+						+7 (499) 922-89-74
+					</a>
+					<button class="button header__btn">заказать звонок</button>
+				</div>
+			</header>
+
+			<div class="promo__wrapper">
+				<h1 class="promo__header">подбор пульсометра</h1>
+				<h2 class="promo__subheader">с учётом вашего уровня подготовки</h2>
+				<div class="promo__icons">
+					<div class="promo__icon">
+						<img class="promo__icon-img" src="img/s1/timer.svg" alt="icon">
+						<div class="promo__icon-text">Время подбора:<br>10 минут</div>
+					</div>
+					<div class="promo__icon">
+						<img class="promo__icon-img" src="img/s1/cart.svg" alt="icon">
+						<div class="promo__icon-text">Бесплатная<br>доставка</div>
+					</div>
+					<div class="promo__icon">
+						<img class="promo__icon-img" src="img/s1/messages.svg" alt="icon">
+						<div class="promo__icon-text">Ответим<br>на все вопросы</div>
+					</div>
+				</div>
+
+				<button class="button button-main">заказать консультацию</button>
+				<div class="promo__link">
+					или
+					<a href="#">перейти в каталог</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="advantage">
+		<div class="container">
+			<h1 class="advantage__header title">наши преимущества</h1>
+			<div class="advantage__wrapper">
+				<div class="advantage__block">
+					<img src="img/s2/advantages/cup.svg" alt="icon" class="advantage__block-icon">
+					<div class="advantage__block-title">Делимся опытом</div>
+					<div class="advantage__block-descr">Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
+				</div>
+				<div class="advantage__block">
+					<img src="img/s2/advantages/heart.svg" alt="icon" class="advantage__block-icon">
+					<div class="advantage__block-title">Заботимся о здоровье</div>
+					<div class="advantage__block-descr">Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</div>
+				</div>
+				<div class="advantage__block">
+					<img src="img/s2/advantages/shoe.svg" alt="icon" class="advantage__block-icon">
+					<div class="advantage__block-title">Учим бегать</div>
+					<div class="advantage__block-descr">Помогаем с обучением правильной технике бега! Дружим с крупнейшей школой бега в России - <a class="advantage__block-link" href="#">I LOVE RUNNING.</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="consultation">
+		<div class="container">
+			<h2 class="title_left title">
+				Получите бесплатную консультацию
+				<br>
+				по подбору пульсометра
+			</h2>
+			<div class="consultation__descr">
+				Просто заполните форму заявки
+				<br>
+				и мы перезвоним вам в течении 10 минут
+			</div>
+
+			<form class="feed-form" action="#">
+				<input name="name" required type="text" placeholder="Ваше имя">
+				<input name="phone" required type="number" placeholder="Ваш телефон">
+				<input name="email" required type="email" placeholder="Ваш E-mail">
+				<button class="button button-submit">заказать консультацию</button>
+			</form>
+
+		</div>
+	</div>
+
 
 </body>
 </html>
