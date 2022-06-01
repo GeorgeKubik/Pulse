@@ -1,0 +1,52 @@
+.footer {
+	position: relative;
+	height: 630px;
+	&__info {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 460px;
+		height: 270px;
+		background: $main-color;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__addr {
+		margin-top: 50px;
+		margin-bottom: 0;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 20px;
+		color: #FFFFFF;
+	}
+	&__phone {
+		margin-top: 36px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 20px;
+		color: #FFFFFF;
+		text-decoration: none;
+			&:hover {
+				color: #fff;
+			} 
+	}
+	&__social {
+		width: 212px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 36px;
+		&-item {
+			width: 52px;
+			height: 52px;
+			border: 1px solid #fff;
+			border-radius: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+}
