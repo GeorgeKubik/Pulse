@@ -4,6 +4,12 @@
 		position: relative;
 		width: 750px;
 		margin: 0 auto;
+		div {
+			img {
+				max-height: 550px;
+				object-fit: cover;
+			}
+		}
 	}
 	.slick-dots {
 		list-style-type: none;

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	//slider
 	$('.carousel__inner').slick({
 		speed: 1200,
 		adaptiveHeight: true,
@@ -41,8 +42,8 @@ $(document).ready(function(){
 		});
 	 });
 
-	/*  function toogleSlide(item) {
-		$('item').each(function(i) {
+	 /* function toogleSlide(item) {
+		$(item).each(function(i) {
 			$(this).on('click', function(e) {
 				e.preventDefault(); // отменили стандартное поведение браузера скролить наверх после нажатия по ссылке
 				$('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
@@ -56,19 +57,77 @@ $(document).ready(function(){
 
 	 // modal
 
-	 $('[data-modal=consultation]').on('click', function(){
-		$('.overlay, #consultation').fadeIn('slow');
-	 });
+	$('[data-modal=consultation]').on('click', function(){
+	$('.overlay, #consultation').fadeIn('slow');
+	});
 
-	 $('.modal__close').on('click', function(){
-		$('.overlay, #consultation, #thanks, #order').fadeOut('slow');
-	 });
+	$('.modal__close').on('click', function(){
+	$('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+	});
 
-	 $('.catalog-item__btn').each(function(i) {
-		$(this).on('click', function(){
-			$('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
-			$('.overlay, #order').fadeIn('slow');
+	$('.catalog-item__btn').each(function(i) {
+	$(this).on('click', function(){
+		$('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+		$('.overlay, #order').fadeIn('slow');
+	});
+	});
+
+	/* $('.feed-form').validate(); */ // взяли метод из плагина jquery validate, но так работает только у первой формы
+	// Валидация форм
+	function valideForms(form) {
+	$(form).validate({
+			rules: {
+					name: {
+						required: true,
+						minlength: 2
+					},
+					phone: "required",
+					email: {
+						required: true,
+						email: true
+					}
+            },
+			messages: {
+				name: {
+					required: "Пожалуйста, введите свое имя",
+					minlength: jQuery.validator.format("Введите {0} символа!")
+				},
+				phone: "Пожалуйста, введите свой телефон",
+				email: {
+					required: "Пожалуйста введите свою почту",
+					email: "Нерпавильно введен адрес почты"
+				}
+			}
+		});	 
+	}
+	valideForms('#consultation-form');
+	valideForms('#consultation form');
+	valideForms('#order form');
+
+	// maskedInput
+
+	$('input[name=phone]').mask("+7 (999) 999-99-99");
+
+	// ajax подключаем
+	$('form').submit(function(e) { // .submit когда все формы отправляются
+		e.preventDefault();			 // отключаем перезагрузку страницы при этом
+											
+		if (!$(this).valid()) {		 // если валидация страница не прошла 
+			return;						 //возвращаем в исходную позицию
+		}
+
+		$.ajax({							 // ajax - 
+			type: "POST",				 // при отправке
+			url: "mailer/smart.php", // адрес куда отправляем наш запрос от пользователя
+			data: $(this).serialize() // когда надо отправить данные от пользователя, надо их расшифровать
+		}).done(function() {			 // здесь обработали ответ от сревера
+			$(this).find("input").val(""); // после того как данные получили все инпуты очистяться  
+
+
+			$('form').trigger('reset'); // все формы очистяться
 		});
-	 });
- });
+		return false;
+	});
+
+});
 
