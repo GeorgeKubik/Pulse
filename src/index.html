@@ -8,11 +8,10 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/style.min.css">
-	<title>Document</title>
+	<title>Pulse</title>
 </head>
 <body>
-	
-	<section class="promo">
+	<section id="up" class="promo">
 		<div class="container">
 			<header class="header">
 				<a href="#" class="header__logo">
@@ -62,17 +61,24 @@
 			<h1 class="advantage__header title">наши преимущества</h1>
 			<div class="advantage__wrapper">
 				<div class="advantage__block">
-					<img src="img/s2/advantages/cup.svg" alt="icon" class="advantage__block-icon">
+					<div class="advantage__block-icon">
+						<img src="img/s2/advantages/cup.svg" alt="icon" class="advantage__block">
+					</div>
 					<div class="advantage__block-title">Делимся опытом</div>
 					<div class="advantage__block-descr">Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
 				</div>
 				<div class="advantage__block">
-					<img src="img/s2/advantages/heart.svg" alt="icon" class="advantage__block-icon">
+					<div class="advantage__block-icon">
+						<img src="img/s2/advantages/heart.svg" alt="icon" class="advantage__block-animated">
+					</div>
 					<div class="advantage__block-title">Заботимся о здоровье</div>
 					<div class="advantage__block-descr">Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</div>
 				</div>
 				<div class="advantage__block">
-					<img src="img/s2/advantages/shoe.svg" alt="icon" class="advantage__block-icon">
+					<div class="advantage__block-icon">
+						<img src="img/s2/advantages/left_foot.PNG" alt="icon" class="advantage__block-shoe-left">
+						<img src="img/s2/advantages/right_foot.PNG" alt="icon" class="advantage__block-shoe-right">
+					</div>
 					<div class="advantage__block-title">Учим бегать</div>
 					<div class="advantage__block-descr">Помогаем с обучением правильной технике бега! Дружим с крупнейшей школой бега в России - <a class="advantage__block-link" href="#">I LOVE RUNNING.</a></div>
 				</div>
@@ -514,7 +520,7 @@
 	<section class="review">
 		<div class="container">
 			<div class="title">отзывы клиентов</div>
-			<div class="review__wrapper">
+			<div class="review__wrapper animate__animated animate__fadeInDown">
 				<div class="review__item">
 					<img class="review__photo" src="img/s5/people_1.jpg" alt="photo">
 					<div class="review-text">
@@ -613,6 +619,11 @@
 			<div class="modal__descr">Наш менеджер свяжется с вами  в ближайшее время!</div>
 		</div>
 	</div>
+
+	<a href="#up" class="pageup">
+		<img src="img/icons/arrow.svg" alt="arrow">
+	</a>
+
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

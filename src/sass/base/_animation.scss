@@ -1,0 +1,29 @@
+@keyframes heartbeat {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.4);
+	}
+	0% {
+		transform: scale(1);
+	}
+}
+
+@keyframes go {
+	0% {
+		transform: translate(-500%);
+	}
+	100% {
+		transform: translate(500%);
+	}
+}
+
+@keyframes run {
+	0% {
+		transform: translate(-450%);
+	}
+	100% {
+		transform: translate(550%);
+	}
+ }
